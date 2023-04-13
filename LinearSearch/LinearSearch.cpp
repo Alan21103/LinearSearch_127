@@ -19,9 +19,9 @@ void input()
 	}
 
 	//Accept array element
-	cout << "\n-------------------\n";
+	cout << "\n--------------------------\n";
 	cout << " Enter array elements \n";
-	cout << "\n-------------------\n";
+	cout << "\n--------------------------\n";
 	for (i = 0; i < n; i++)
 	{
 		cout << "<" << (i + 1) << "> ";
@@ -39,15 +39,15 @@ void LinearSearch()
 	do
 	{
 		//Accept this number to be searched
-		cout << "\nEnter the element you want to search: ";
+		cout << "\nEnter the element you want to search: ";			//Langkah algoritma no. 1
 		int item;
 		cin >> item;
 
 		ctr = 0;
-		for (i = 0; i < n; i++)
+		for (i = 0; i < n; i++)										//Langkah algoritma no. 2, 3, dan 4
 		{
 			ctr++;
-			if (arr[1] == item)
+			if (arr[i] == item)						//Langkah no.5
 			{
 				cout << "\n" << item << " found at position " << (i + 1) << endl;
 				break;
@@ -61,4 +61,11 @@ void LinearSearch()
 		cout << "\nCountinue search (y/n): ";
 		cin >> ch;
 	} while ((ch == 'y') || (ch == 'Y'));
+}
+
+
+int main()
+{
+	input();
+	LinearSearch();
 }
